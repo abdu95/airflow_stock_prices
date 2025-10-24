@@ -1,4 +1,24 @@
-Overview
+Automated Stock Data Pipeline - Stock Tracking
+========
+
+Developed a complete data pipeline with Apache Airflow to collect, process, and visualize Apple stock data in a real-world workflow. The pipeline automated data ingestion, transformation, and storage, and integrated with a BI dashboard for monitoring stock trends.
+
+Key Components & Workflow:
+
+API Integration: Built a PythonOperator to fetch Apple stock prices from a public API and a Sensor to check API availability before ingestion.
+
+Data Storage: Stored raw data in MinIO (S3-compatible) storage and formatted it using Spark with the DockerOperator for scalable processing.
+
+Data Warehouse Loading: Loaded processed data efficiently into PostgreSQL using the Astro SDK, ensuring reliability and performance.
+
+Orchestration: Designed modular DAGs using both the TaskFlow API and @dag decorator, following Airflow best practices for maintainability.
+
+Visualization: Connected Airflow outputs to Metabase, creating a live dashboard to track Apple stock performance over time.
+
+Technologies: Airflow, Python, Spark, MinIO (S3), PostgreSQL, Astro SDK, Metabase, Docker
+
+
+Project overview
 ========
 
 Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
