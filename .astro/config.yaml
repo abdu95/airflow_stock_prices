@@ -1,0 +1,4 @@
+project:
+    name: airflow-stock-prices
+postgres:
+    port: 5434
